@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Jagriti Yadav</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css"></noscript>
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="logo">
+                <span class="icon fa-gem"></span>
+            </div>
+            <div class="content">
+                <div class="inner">
+                    <h1>Jagriti Yadav</h1>
+                    <p>A Visionary Innovative AI and Data Science Enthusiast</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#intro">Intro</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Intro -->
+            <article id="intro">
+                <h2 class="major">Intro</h2>
+                <span class="image main"><img src="images/pic.jpeg" alt="Intro Image"></span>
+                <p>Hi! I'm Jagriti Yadav, currently pursuing a dual degree in Computer Science AI from Lucknow University and BS in Data Science from IIT Madras. I have intermediate skills in Java and Python, and I enjoy working with HTML, CSS, and JavaScript for front-end development. I'm passionate about AI and eager to learn more and contribute to this field. Apart from tech, I love reading fiction, autobiographies, and self-help books. I also enjoy writing shayari and stories, playing chess, and listening to music to relax. I've always been a dedicated student, with leadership qualities honed through winning debates, participating in dramas, and spelling bees. I'm looking forward to connecting with like-minded people and exploring new opportunities! Thank you for your valuable time spent reading about me.</p>
+            </article>
+
+            <!-- Skills -->
+            <article id="skills">
+                <h2 class="major">Skills</h2>
+                <span class="image main"><img src="images/skill.png" alt="Skills Image"></span>
+                <ul>
+                    <li>Proficient in Python, Java, and C++</li>
+                    <li>Web Development using HTML, CSS, and JavaScript</li>
+                    <li>Strong understanding of AI principles and algorithms</li>
+                    <li>Excellent problem-solving and analytical skills</li>
+                </ul>
+                <p>Additional Skills:</p>
+                <ul>
+                    <li>Programming Languages: Python, Java</li>
+                    <li>Web Development: HTML, CSS, JavaScript</li>
+                    <li>Software: MS Word (Document creation, formatting, editing)</li>
+                    <li>Video Editing: Basic knowledge</li>
+                </ul>
+            </article>
+
+            <!-- Projects -->
+            <article id="projects">
+                <h2 class="major">Projects</h2>
+                <span class="image main"><img src="images/project.png" alt="Projects Image"></span>
+                <p>Here are some of the exciting projects I have worked on:</p>
+                <ul>
+                    <li><strong>Tic Tac Toe Game:</strong> A web-based game developed using HTML, CSS, and JavaScript.</li>
+
+                    <li><strong>Stone-Paper-Scissors Game:</strong> An interactive game with enhanced UI.</li>
+
+                    <li><strong>Catch the Falling Object Game:</strong> A Python game developed using Pygame with various difficulty levels.</li>
+
+                    <li><strong>Guess the Number Game:</strong> Developed a game where the player guesses a randomly generated number within a range, receiving feedback on whether their guess was too high or too low.</li>
+
+                    <li><strong>To-Do List:</strong> Developed a to-do list application for task management, featuring add, delete, and mark as complete functionalities with a clean user interface.</li>
+                </ul>
+            </article>
+
+            <!-- Contact -->
+            <article id="contact">
+                <h2 class="major">Contact</h2>
+                <form id="contact-form">
+                    <div class="fields">
+                        <div class="field half">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" required />
+                        </div>
+                        <div class="field half">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" required />
+                        </div>
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" rows="4" required></textarea>
+                        </div>
+                    </div>
+                    <ul class="actions">
+                        <li><input type="submit" value="Send Message" class="primary" /></li>
+                        <li><input type="reset" value="Reset" /></li>
+                    </ul>
+                </form>
+                <ul class="icons">
+                    <li><a href="https://twitter.com/iamyjagriti" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="https://www.instagram.com/iamyjagriti" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                    <li><a href="https://github.com/iamjagritiyadav" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                    <li><a href="https://www.linkedin.com/in/iamyjagriti" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                </ul>
+            </article>
+
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright">&copy; linkedin <a href="https://www.linkedin.com/in/iamyjagriti/">Jagriti Yadav</a></p>
+        </footer>
+
+    </div>
+
+    <!-- BG -->
+    <div id="bg"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(this);
+            fetch('send-email.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert('Message sent successfully!');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was a problem sending the message.');
+            });
+        });
+    </script>
+</body>
+</html>
+
